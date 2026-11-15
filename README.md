@@ -9,7 +9,8 @@ The page covers:
 - spending categories such as housing, travel and kids, and how their shares shift with net worth;
 - the net worth at which people report business class, second homes, household staff, private schools, private aviation and boats;
 - how net worth changed for 274 people who reported it more than once, years apart, compared with the S&P 500 over the same dates;
-- how spending compares with 622 households from the neighbouring r/ChubbyFIRE forum at the same net worth.
+- how spending compares with 622 households from the neighbouring r/ChubbyFIRE forum at the same net worth;
+- how net worth and income vary with age, and how posters compare with the *Millionaire Next Door* benchmark.
 
 Charts, tables and summary figures can be filtered by single or married, kids or no kids, and working or retired.
 

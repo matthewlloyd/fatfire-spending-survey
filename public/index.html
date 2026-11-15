@@ -284,6 +284,7 @@ body.filtered #fcount { color: var(--ink); font-weight: 500; }
         <li><a href="#h-profiles"><span class="tn">06</span><span>What a band looks like up close</span></a></li>
         <li><a href="#h-panel"><span class="tn">07</span><span>The same people, years apart</span></a></li>
         <li><a href="#h-chubby"><span class="tn">08</span><span>Next door on r/ChubbyFIRE</span></a></li>
+        <li><a href="#h-age"><span class="tn">09</span><span>Age, income and net worth</span></a></li>
         <li><a href="#h-method"><span class="tn">—</span><span>How this was put together</span></a></li>
       </ol>
     </nav>
@@ -340,6 +341,7 @@ body.filtered #fcount { color: var(--ink); font-weight: 500; }
       <li><span><strong>Luxuries arrive in a rough order.</strong> Business class on long flights comes first (median net worth of adopters about $6.1M). Second homes, household staff and private school cluster around $10M. Private flying shows up around $20M, mostly as occasional charters, and the fractional shares and owned jets came from people at nine figures. Boats appear across the range, mostly smaller ones; large-yacht owners rarely give a net worth and often call the boat a money pit.</span></li>
     <li><span><strong>People who report again are richer later.</strong> Among 274 people who posted their net worth twice or more, a median 2.6 years apart, net worth grew a median 15.5% a year after inflation, faster than the S&amp;P 500's 11.3% over the same dates. Growth slows with wealth: about 26% a year below $3M, about 10% at $5–20M. Retirees grew about 5% a year.</span></li>
       <li><span><strong>r/ChubbyFIRE posters spend a little less at the same net worth.</strong> Across 622 households from the neighbouring forum, spending is about 13% lower than on r/fatFIRE at the same net worth, mostly because they earn less: holding income equal as well, the gap is about 6%.</span></li>
+      <li><span><strong>Age matters more than income for net worth.</strong> Median net worth rises from $2.0M under 30 to about $10M after 50. At the same income, each extra year of age goes with about 6.6% more net worth; doubling income at the same age goes with about 31% more.</span></li>
     
 </ol>
   </section>
@@ -561,6 +563,44 @@ body.filtered #fcount { color: var(--ink); font-weight: 500; }
     <p class="small muted">Both forums are self-selected, and people may pitch their numbers differently to each audience. Most Chubby posts date from 2023 on, because the forum was small before 2021, while the r/fatFIRE sample reaches back to 2016; restricting both forums to posts from 2023 on gives a similar gap, about 15%.</p>
   </section>
 
+  <section aria-labelledby="h-age">
+    <div class="sec-head">
+      <span class="eyebrow">Exhibit 9</span>
+      <h2 id="h-age">Age, income and net worth</h2>
+      <p>1,540 of the 2,188 households give the author's age, and 845 of those give income and net worth as well. Each dot is one household: age when posting against net worth, coloured by household income. The squares mark the median net worth in each age band. Net worth climbs steadily with age until about 50 and then levels off near $10M, while income peaks in the early 40s.</p>
+    </div>
+    <div class="ledger">
+      <div><span class="fig" id="a-age">–</span><span class="lab">Median age when posting</span></div>
+      <div><span class="fig" id="a-gr">–</span><span class="lab">More net worth for each extra year of age, at the same income (working households)</span></div>
+      <div><span class="fig" id="a-mult">–</span><span class="lab">Median net worth as a multiple of annual income (working households)</span></div>
+      <div><span class="fig" id="a-paw">–</span><span class="lab">Median net worth against the <i>Millionaire Next Door</i> benchmark, age × income ÷ 10</span></div>
+    </div>
+    <div class="exhibit">
+      <div class="exhibit-cap">
+        <div class="legend" id="age-legend"></div>
+        <span class="small muted">Hover a dot for that household</span>
+      </div>
+      <div id="age-chart"></div>
+    </div>
+    <div class="exhibit">
+      <div class="exhibit-cap"><span class="eyebrow">By age</span><span class="small muted">Income and the multiple use working households that gave both</span></div>
+      <div class="table-wrap">
+        <table id="age-table">
+          <thead><tr><th>Age</th><th class="num">People</th><th class="num">Median NW</th><th class="num">Middle half</th><th class="num">Median income<small>working</small></th><th class="num">NW ÷ income</th><th class="num">Retired</th><th class="num">Median spend</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="small muted" id="a-fit"></p>
+    </div>
+    <ol class="findings">
+      <li><span><strong>Net worth climbs with age, then levels off after 50.</strong> The median is $2.0M under 30, $3.7M at 30–34, $5.5M at 35–39, $7.5M at 40–44 and $8.9M at 45–49, then about $10M from 50 on. Among working households, net worth is about 3 times income under 30, 6 to 7 times in the early 40s and about 11 times in the early 50s.</span></li>
+      <li><span><strong>Income peaks in the early 40s.</strong> Among working households, median income rises from $431K under 30 to $851K at 40–44, then eases to about $800K at 45–54 and $506K at 55–59 as people step back. The share who are retired or semi-retired rises from 4% under 30 to 17% at 40–44, 27% at 50–54 and 43% at 55–59.</span></li>
+      <li><span><strong>Age predicts net worth better than income does.</strong> Among 777 working households that gave age, income and net worth, each extra year of age goes with about 6.6% more net worth at the same income, and doubling income at the same age goes with about 31% more. Age alone explains 28% of the variation in net worth (on a log scale), income alone 17%, the two together 37%. Within an age band, income and net worth are only loosely related.</span></li>
+      <li><span><strong>Most posters are well ahead of the classic benchmark.</strong> <i>The Millionaire Next Door</i> puts expected net worth at age × pre-tax income ÷ 10. The median working household here has 1.6 times that; 38% have at least twice it, the book's "prodigious accumulator" line, and 8% have less than half. The multiple rises with age, from 1.2 under 35 to 2.2 at 45 and over.</span></li>
+    </ol>
+    <p class="small muted">Comparing people of different ages is not the same as following one person: the people in Exhibit 7 who posted twice grew about 15% a year, far faster than the age gradient here. Posters over 50 are mostly retirees who still read the forum, and only 16 are 60 or older. Income is pre-tax household income as stated, and many retirees don't give one.</p>
+  </section>
+
 <section aria-labelledby="h-method" class="method">
     <div class="sec-head">
       <span class="eyebrow">Method</span>
@@ -578,6 +618,7 @@ body.filtered #fcount { color: var(--ink); font-weight: 500; }
 <li><strong>Growth decomposition.</strong> For each pair of successive reports from someone who gave income and spend, I assumed both held steady between the reports and solved for the constant investment return that turns the first net worth into the second. Pre-tax income is taxed with 2025 federal brackets (married filing jointly unless the person is single), Social Security up to the wage base, Medicare with the surtax, and a flat 5% state rate on taxable income. With a 0% or 10% state rate instead, the median implied return for workers is about 11% or 13%. The model treats all income as wages, so it overstates tax on capital gains and business income, and it can't see equity grants, inheritances or a home bought or sold; those all land in "investment gains".</li>
       
 <li><strong>r/ChubbyFIRE.</strong> For Exhibit 8, I downloaded all 8,247 r/ChubbyFIRE posts (2019 to November 2026), every comment in 41 threads that ask about spending or net worth, and all 138,840 comments from November 2024 to October 2026. Language models read the 1,136 posts that mention a net worth and spending and the 714 comments that give a net worth or spending figure, with the same rules as the main survey; low-confidence readings were dropped. Each account counts once, posts after October 2026 are left out, and 114 accounts that also have an r/fatFIRE record count only there. The gap at the same net worth is the forum coefficient in a regression of log spend on log net worth, forum, single, kids and retired.</li>
+      <li><strong>Age, income and net worth.</strong> Age is the author's own stated age when posting, given by 1,540 households. Income is stated pre-tax household income. The age gradient, the income multiple and the <i>Millionaire Next Door</i> comparison (net worth against age × income ÷ 10) use working households that gave age, income and net worth; the gradient is a regression of log net worth on age and log income. Dots in Exhibit 9 are spread slightly within each year of age so they don't stack.</li>
       <li><strong>Copyright.</strong> Household summaries on this page are paraphrases. Follow the links for the original words.</li>
     </ul>
   </section>
@@ -1193,6 +1234,110 @@ body.filtered #fcount { color: var(--ink); font-weight: 500; }
     });
   }
 
+  // ---------- Exhibit 9: age, income and net worth ----------
+  const AGE_BANDS = [[0, 30, "Under 30"], [30, 35, "30–34"], [35, 40, "35–39"], [40, 45, "40–44"], [45, 50, "45–49"], [50, 55, "50–54"], [55, 60, "55–59"], [60, 200, "60+"]];
+  const INC_COLORS = ["--q3", "--q4", "--q5", "--q6"];
+  function ageExhibit() {
+    const recs = active() ? ALL.filter(match) : ALL;
+    const A = recs.filter((r) => r.age >= 18 && r.age <= 90);
+    const work = A.filter((r) => r.work === "working" && r.nw && r.inc > 0);
+    const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+    set("a-age", A.length >= 5 ? String(Math.round(med(A.map((r) => r.age)))) : "–");
+    let fit = null;
+    if (work.length >= 30) {
+      const [b, r2] = ols(work.map((r) => [1, r.age, Math.log(r.inc)]), work.map((r) => Math.log(r.nw)));
+      if (b) fit = { age: Math.exp(b[1]) - 1, inc: 2 ** b[2] - 1, r2, n: work.length };
+    }
+    set("a-gr", fit ? (fit.age >= 0 ? "+" : "−") + Math.abs(fit.age * 100).toFixed(1) + "%" : "–");
+    set("a-mult", work.length >= 5 ? med(work.map((r) => (r.nw * 1000) / r.inc)).toFixed(1) + "×" : "–");
+    set("a-paw", work.length >= 5 ? med(work.map((r) => (r.nw * 1000) / ((r.age * r.inc) / 10))).toFixed(1) + "×" : "–");
+    set("a-fit", fit
+      ? `Regression on ${fmtN(fit.n)} working households: log net worth on age and log income. Doubling income at the same age goes with ${Math.round(fit.inc * 100)}% more net worth; the two together explain ${Math.round(fit.r2 * 100)}% of the variation.`
+      : "Too few working households with age and income match these filters to fit the age gradient.");
+
+    const tb = document.querySelector("#age-table tbody");
+    if (tb) {
+      tb.replaceChildren();
+      AGE_BANDS.forEach(([lo, hi, band]) => {
+        const g = A.filter((r) => r.age >= lo && r.age < hi); if (!g.length) return;
+        const nw = g.filter((r) => r.nw).map((r) => r.nw), w = work.filter((r) => r.age >= lo && r.age < hi);
+        const ws = g.filter((r) => r.work), sp = g.filter((r) => r.sp).map((r) => r.sp);
+        const tr = h("tr", null, null, tb);
+        h("th", null, band, tr).scope = "row";
+        h("td", "num", String(nw.length), tr);
+        h("td", "num strong", nw.length >= 3 ? fmtM(med(nw)) : "–", tr);
+        h("td", "num", nw.length >= 5 ? `${fmtM(quant(nw, 0.25))} – ${fmtM(quant(nw, 0.75))}` : "–", tr);
+        h("td", "num", w.length >= 3 ? fmtK(med(w.map((r) => r.inc))) : "–", tr);
+        h("td", "num", w.length >= 3 ? med(w.map((r) => (r.nw * 1000) / r.inc)).toFixed(1) + "×" : "–", tr);
+        h("td", "num", ws.length >= 5 ? Math.round((ws.filter((r) => r.work === "retired").length / ws.length) * 100) + "%" : "–", tr);
+        h("td", "num", sp.length >= 3 ? fmtK(med(sp)) : "–", tr);
+      });
+      if (!tb.children.length) { const td = h("td", "muted", "No households match.", h("tr", null, null, tb)); td.colSpan = 8; }
+    }
+
+    const leg = document.getElementById("age-legend");
+    const cols = INC_COLORS.map(css), other = css("--deemph");
+    if (leg) {
+      leg.replaceChildren();
+      INC_BANDS.forEach(([, , lab], i) => { const it = h("span", "legend-item", null, leg); h("span", "legend-dot", null, it).style.background = cols[i]; h("span", null, lab + " income", it); });
+      const it = h("span", "legend-item", null, leg); h("span", "legend-dot", null, it).style.background = other; h("span", null, "No income given", it);
+      const m = h("span", "legend-item", null, leg); h("span", "legend-med", null, m); h("span", null, "Age-band median, bar = middle half", m);
+    }
+
+    const root = document.getElementById("age-chart"); if (!root) return;
+    const pts = A.filter((r) => r.nw >= 0.3 && r.nw <= 100 && r.age >= 20 && r.age <= 75);
+    if (pts.length < 5) return empty(root, "Too few households with an age match these filters to draw this.");
+    root.replaceChildren();
+    const W = Math.max(300, root.clientWidth), H = Math.min(520, Math.max(320, W * 0.58));
+    const m = { l: 56, r: 16, t: 14, b: 44 };
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img", "aria-label": "Net worth against age, one dot per household, coloured by income" }, root);
+    const y0 = Math.log10(0.3), y1 = Math.log10(100);
+    const X = (a) => m.l + ((a - 20) / 55) * (W - m.l - m.r);
+    const Y = (nw) => H - m.b - ((Math.log10(nw) - y0) / (y1 - y0)) * (H - m.t - m.b);
+    const grid = css("--grid"), axis = css("--axis"), ink = css("--ink"), surf = css("--surface");
+    [20, 30, 40, 50, 60, 70].forEach((t) => {
+      el("line", { x1: X(t), x2: X(t), y1: m.t, y2: H - m.b, stroke: grid, "stroke-width": 1 }, svg);
+      el("text", { x: X(t), y: H - m.b + 18, "text-anchor": "middle", class: "tick" }, svg).textContent = String(t);
+    });
+    [0.3, 1, 3, 10, 30, 100].forEach((t) => {
+      el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: grid, "stroke-width": 1 }, svg);
+      el("text", { x: m.l - 8, y: Y(t) + 4, "text-anchor": "end", class: "tick" }, svg).textContent = fmtM(t);
+    });
+    el("line", { x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, stroke: axis, "stroke-width": 1 }, svg);
+    el("text", { x: (m.l + W - m.r) / 2, y: H - 6, "text-anchor": "middle", class: "axis-title" }, svg).textContent = "Age when posting";
+    const cy = (m.t + H - m.b) / 2;
+    el("text", { x: 14, y: cy, "text-anchor": "middle", class: "axis-title", transform: `rotate(-90 14 ${cy})` }, svg).textContent = "Net worth (log scale, 2026 $)";
+    const incIdx = (r) => (r.inc > 0 ? INC_BANDS.findIndex(([lo, hi]) => r.inc >= lo && r.inc < hi) : -1);
+    const jitter = (r) => ((r.nw * 997 + r.age * 13) % 1) * 0.8 - 0.4; // deterministic spread for whole-year ages
+    const dots = [...pts].sort((a, b) => incIdx(a) - incIdx(b)).map((r) => {
+      const i = incIdx(r), c = i >= 0 ? cols[i] : other, cx = X(r.age + jitter(r)), cyy = Y(r.nw);
+      el("circle", { cx, cy: cyy, r: i >= 0 ? 4 : 3, fill: c, stroke: surf, "stroke-width": 1.2, "fill-opacity": i >= 0 ? 0.9 : 0.6 }, svg);
+      return { r, cx, cy: cyy, c };
+    });
+    AGE_BANDS.forEach(([lo, hi]) => {
+      const g = pts.filter((r) => r.age >= lo && r.age < hi); if (g.length < 5) return;
+      const nw = g.map((r) => r.nw), cx = X(med(g.map((r) => r.age)));
+      el("line", { x1: cx, x2: cx, y1: Y(quant(nw, 0.25)), y2: Y(quant(nw, 0.75)), stroke: ink, "stroke-width": 3, "stroke-linecap": "round" }, svg);
+      el("rect", { x: cx - 7, y: Y(med(nw)) - 7, width: 14, height: 14, rx: 2, fill: ink, stroke: surf, "stroke-width": 2 }, svg);
+    });
+    const hit = el("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b, fill: "transparent" }, svg);
+    let ring = null;
+    hit.addEventListener("pointermove", (e) => {
+      const rect = svg.getBoundingClientRect(), sx = W / rect.width;
+      const px = (e.clientX - rect.left) * sx, py = (e.clientY - rect.top) * sx;
+      let best = null, bd = 30 * 30;
+      dots.forEach((d) => { const dd = (d.cx - px) ** 2 + (d.cy - py) ** 2; if (dd < bd) { bd = dd; best = d; } });
+      if (ring) { ring.remove(); ring = null; }
+      if (!best) return hideTip();
+      ring = el("circle", { cx: best.cx, cy: best.cy, r: 8, fill: "none", stroke: ink, "stroke-width": 2 }, svg);
+      const r = best.r;
+      showTip(e, [[fmtM(r.nw), `net worth · age ${r.age}`, best.c],
+        [null, [r.inc ? fmtK(r.inc) + " income" : "no income given", r.sp ? fmtK(r.sp) + "/yr spend" : null].filter(Boolean).join(" · ")],
+        [null, [r.work, r.hh, r.date].filter(Boolean).join(" · ")]]);
+    });
+    hit.addEventListener("pointerleave", () => { hideTip(); if (ring) { ring.remove(); ring = null; } });
+  }
+
   // ---------- filter bar ----------
   function render() {
     const recs = active() ? ALL.filter(match) : ALL;
@@ -1205,7 +1350,7 @@ body.filtered #fcount { color: var(--ink); font-weight: 500; }
     const rs = document.getElementById("freset"); if (rs) rs.hidden = !active();
     document.body.classList.toggle("filtered", active());
     ledger(S); hbars("nw-hist", S.nwHist); hbars("spend-hist", S.spHist);
-    scatter(S); bandTable(S); incomeTables(S); categories(S); luxRange(S); profiles(S); panel(); decomp(); chubby(S.both);
+    scatter(S); bandTable(S); incomeTables(S); categories(S); luxRange(S); profiles(S); panel(); decomp(); chubby(S.both); ageExhibit();
   }
   const syncButtons = () => document.querySelectorAll(".fbtn").forEach((x) => x.setAttribute("aria-pressed", String(state[x.dataset.f] === x.dataset.v)));
   document.querySelectorAll(".fbtn").forEach((b) => b.addEventListener("click", () => {
@@ -1229,7 +1374,7 @@ body.filtered #fcount { color: var(--ink); font-weight: 500; }
   render();
 
   let rt;
-  const redraw = () => { scatter(current); luxRange(current); categories(current); panel(); chubby(current.both); };
+  const redraw = () => { scatter(current); luxRange(current); categories(current); panel(); chubby(current.both); ageExhibit(); };
   window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(redraw, 150); });
   const mq = window.matchMedia("(prefers-color-scheme: dark)");
   if (mq.addEventListener) mq.addEventListener("change", redraw);
