@@ -7,7 +7,8 @@ The page covers:
 - the distribution of net worth and annual spend;
 - how spending scales with net worth (typical spend at $5M, $10M, $20M and beyond) and how income changes it;
 - spending categories such as housing, travel and kids, and how their shares shift with net worth;
-- the net worth at which people report business class, second homes, household staff, private schools, private aviation and boats.
+- the net worth at which people report business class, second homes, household staff, private schools, private aviation and boats;
+- how net worth changed for 274 people who reported it more than once, years apart, compared with the S&P 500 over the same dates.
 
 Charts, tables and summary figures can be filtered by single or married, kids or no kids, and working or retired.
 
